@@ -8,7 +8,7 @@ $db_config = [
     'user' => 'dbconnectusr',
     'pass' => 'db@Con$ter',
     
-    'access_pass' => '$2y$10$K7.R.jZ.6pImsUq5.0WpGeuM8fPzQ6XlUuGk5L1y1Xh5h6h7h8h9h' // 'sirvenom123'
+    'access_pass' => '$2a$12$BOzSLzJWsJ9wtW0JidSMeuHNMCEtGBW9BwpIIplXWRxeCh3Q262uG' // 'sirvenom123'
 ];
 
 
