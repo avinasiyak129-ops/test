@@ -3,7 +3,7 @@ session_start();
 
 // --- 1. CONFIGURATION ---
 $db_config = [
-    'host' => 'localhost',
+    'host' => '10.8.81.38',
     'name' => 'opal_learninghub_live',
     'user' => 'dbconnectusr',
     'pass' => 'db@Con$ter',
