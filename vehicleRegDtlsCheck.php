@@ -31,7 +31,7 @@ if (!isset($_SESSION['authenticated'])) {
     die('
     <body style="background:#0d1117; color:#58a6ff; font-family:monospace; display:flex; justify-content:center; align-items:center; height:100vh; margin:0;">
         <form method="post" style="border:1px solid #30363d; padding:30px; background:#161b22; border-radius:8px;">
-            <h3 style="margin-top:0; color:#c9d1d9;">V-INTEL GATEWAY</h3>
+            <h3 style="margin-top:0; color:#c9d1d9;">Vehicle Search GATEWAY</h3>
             <input type="password" name="login_pass" placeholder="Password" required style="background:#0d1117; color:#c9d1d9; border:1px solid #30363d; padding:10px; width:220px; border-radius:4px;">
             <button type="submit" style="background:#238636; color:#fff; border:none; padding:10px 15px; cursor:pointer; border-radius:4px;">UNLOCK</button>
             <p style="color:#f85149; font-size:12px;">'.($error ?? '').'</p>
