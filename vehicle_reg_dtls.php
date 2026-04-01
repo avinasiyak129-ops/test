@@ -13,9 +13,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['_action']) && $_POST[
     $f = $_POST;
 
     // Helper: return null for empty strings (needed for nullable INT/date columns)
-    $ni = fn($k) => (isset($f[$k]) && $f[$k] !== '') ? (int)$f[$k]   : null; // nullable int
-    $ns = fn($k) => (isset($f[$k]) && $f[$k] !== '') ? $f[$k]         : null; // nullable string/date
-    $dt = fn($k) => (isset($f[$k]) && $f[$k] !== '') ? str_replace('T', ' ', $f[$k]) : null; // datetime-local → MySQL
+    $ni = function($k) use ($f) {
+    return (isset($f[$k]) && $f[$k] !== '') ? (int)$f[$k] : null;
+};
+
+$ns = function($k) use ($f) {
+    return (isset($f[$k]) && $f[$k] !== '') ? $f[$k] : null;
+};
+
+$dt = function($k) use ($f) {
+    return (isset($f[$k]) && $f[$k] !== '') ? str_replace('T', ' ', $f[$k]) : null;
+};
 
     // Required ints
     $appinstinfomain_fk    = (int)$f['rvrd_appinstinfomain_fk'];
