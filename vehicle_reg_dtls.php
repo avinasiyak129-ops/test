@@ -573,7 +573,7 @@ function makeTomAjax(id, type, placeholder) {
     placeholder: placeholder,
     preload: true,
     load: function(query, callback) {
-      fetch('fk_search.php?type=' + type + '&q=' + encodeURIComponent(query))
+      fetch('fk_search_vehicle.php?type=' + type + '&q=' + encodeURIComponent(query))
         .then(r => r.json()).then(callback).catch(() => callback());
     },
     render: {
