@@ -139,7 +139,7 @@ if ($mode === 'edit') {
         <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
             <form method="get">
                 <label style="display:block; margin-bottom:10px; font-weight:bold;">Search by Vehicle Registration Number:</label>
-                <input type="text" name="search" placeholder="Format: 3788-BK or 7390BM" value="<?= htmlspecialchars($_GET['search'] ?? '') ?>" style="width: 350px; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 4px;">
+                <input type="text" name="search" placeholder="Format: 3788-BK or 3788BK" value="<?= htmlspecialchars($_GET['search'] ?? '') ?>" style="width: 350px; padding: 12px; font-size: 16px; border: 2px solid #ddd; border-radius: 4px;">
                 <button type="submit" class="btn btn-primary" style="padding: 13px 25px;">Search Matrix</button>
                 <a href="?" class="btn" style="background:#8a8d91; color:white; padding: 13px 25px;">Reset</a>
             </form>
