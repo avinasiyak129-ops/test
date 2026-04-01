@@ -65,7 +65,7 @@ if ($mode === 'edit' && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['u
     }
     
     $execute_params['pk'] = $pk;
-    $sql = "UPDATE rasvehicleregdtls_tbl SET " . implode(', ', $setParts) . " WHERE rasvehicleregdtls_pk = :pk";
+    $sql = "UPDATE rasvehicleregdtls_tbl SET " . implode(', ', $setParts) . " WHERE rvrd_vechicleregno = :pk";
     
     try {
         $stmt = $pdo->prepare($sql);
@@ -78,7 +78,7 @@ if ($mode === 'edit' && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['u
 
 // --- 6. DATA FETCHING (Logic Modified for Reg No Formats) ---
 if ($mode === 'edit') {
-    $stmt = $pdo->prepare("SELECT * FROM rasvehicleregdtls_tbl WHERE rasvehicleregdtls_pk = ?");
+    $stmt = $pdo->prepare("SELECT * FROM rasvehicleregdtls_tbl WHERE rvrd_vechicleregno = ?");
     $stmt->execute([$_GET['id']]);
     $record = $stmt->fetch(PDO::FETCH_ASSOC);
     if (!$record) die("Record purged or non-existent.");
@@ -88,9 +88,7 @@ if ($mode === 'edit') {
     
     if ($search !== '') {
         // Strip hyphens from the search term to match the 'cleaned' DB column
-        $cleanSearch = str_replace('-', '', $search);
-        // Use REPLACE in SQL to ignore hyphens in the table column during comparison
-        $query .= " WHERE REPLACE(rvrd_vechicleregno, '-', '') = :search";
+       
         $stmt = $pdo->prepare($query);
         $stmt->execute(['search' => $cleanSearch]);
     } else {
