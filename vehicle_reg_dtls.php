@@ -209,7 +209,8 @@ $dataSql = "SELECT rasvehicleregdtls_pk, rvrd_appinstinfomain_fk, rvrd_opalmembe
 
 $stmt = $conn->prepare($dataSql);
 if ($types) {
-    $limitVal = $limit; $offsetVal = $offset;
+    $limitVal = $limit; 
+    $offsetVal = $offset;
     $stmt->bind_param($types . 'ii', ...[...$params, &$limitVal, &$offsetVal]);
 } else {
     $stmt->bind_param('ii', $limit, $offset);
