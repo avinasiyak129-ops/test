@@ -1,10 +1,7 @@
 <html>
 <head>
     <style>
-        /* Project: Obsidian Glass UI Framework
-   Author: Jarvis (for Sir Venom)
-   Version: 1.0.4 
-*/
+
 
 :root {
   /* Dynamic Color Palette */
