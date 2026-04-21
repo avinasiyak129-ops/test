@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_learner'])) {
     if (isset($_FILES['learner_photo']) && $_FILES['learner_photo']['error'] == 0) {
         $fileExt = pathinfo($_FILES['learner_photo']['name'], PATHINFO_EXTENSION);
         $fileName = "LNR_" . time() . "." . $fileExt;
-        $uploadDir = "../uploads/learner_photos/"; // Ensure this folder exists and is writable
+        $uploadDir = "../wp-content/uploads/2026/04/"; // Ensure this folder exists and is writable
         
         if (move_uploaded_file($_FILES['learner_photo']['tmp_name'], $uploadDir . $fileName)) {
             // Insert into your file details table to get the PK for the staff repo
