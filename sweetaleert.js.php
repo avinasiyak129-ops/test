@@ -151,7 +151,7 @@ try {
             }
 
             $stmt_staff->bind_param(
-                "sssssi",
+                "sssssii",
                 $learner_idnumber,
                 $learner_name_en,
                 $learner_name_ar,
