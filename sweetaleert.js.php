@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') { ?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bulk Learner Insert (Reverse Engineered)</title>
+    <title>Bulk Learner Insert</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 60px auto; }
         label { display: block; margin-bottom: 8px; font-weight: bold; }
