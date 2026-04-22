@@ -1,5 +1,5 @@
 <?php
-
+ini_set('auto_detect_line_endings', true);
 
 include __DIR__ . '/dbconnect.php';
 
